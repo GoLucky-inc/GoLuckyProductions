@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function SnakeSpellPage() {
     return (
-        <main className="min-h-screen flex flex-col relative">
+        <main className="min-h-screen flex flex-col relative bg-black">
             {/* Navigation */}
             <nav className="absolute top-0 left-0 w-full p-6 z-50">
                 <div className="container flex justify-between items-center">
@@ -15,17 +15,6 @@ export default function SnakeSpellPage() {
 
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 -z-10">
-                    <Image
-                        src="/snake-spell-hero.png"
-                        alt="Snake Spell Background"
-                        fill
-                        className="object-cover opacity-30 blur-sm"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[hsl(var(--background))]"></div>
-                </div>
-
                 <div className="container text-center animate-fade-in">
                     <div className="inline-block mb-4 px-4 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm font-medium backdrop-blur-md">
                         New Release
@@ -48,28 +37,16 @@ export default function SnakeSpellPage() {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="py-24 bg-black/20">
-                <div className="container">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="glass-panel p-8 text-center">
-                            <div className="text-4xl mb-4">🐍</div>
-                            <h3 className="text-xl font-bold mb-2 text-white">Classic Gameplay</h3>
-                            <p>The nostalgic snake mechanics you love, reimagined with smooth controls and modern physics.</p>
-                        </div>
-                        <div className="glass-panel p-8 text-center">
-                            <div className="text-4xl mb-4">✨</div>
-                            <h3 className="text-xl font-bold mb-2 text-white">Spellcasting</h3>
-                            <p>Collect letters to form words and unleash magical effects to clear obstacles and boost your score.</p>
-                        </div>
-                        <div className="glass-panel p-8 text-center">
-                            <div className="text-4xl mb-4">🎨</div>
-                            <h3 className="text-xl font-bold mb-2 text-white">Neon Aesthetics</h3>
-                            <p>Immerse yourself in a stunning cyberpunk forest with dynamic lighting and particle effects.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+
+            <footer className="absolute bottom-4 w-full text-center z-10 flex justify-center gap-6">
+                <Link href="/privacy-policy" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+                    Privacy Policy
+                </Link>
+                <Link href="/terms-of-service" className="text-sm text-gray-500 hover:text-gray-300 transition-colors">
+                    Terms of Service
+                </Link>
+            </footer>
         </main>
     );
 }

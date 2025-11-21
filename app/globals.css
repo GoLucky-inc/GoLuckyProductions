@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   /* Color Palette - Premium Dark Theme */
   --background: 240 10% 3.9%;
