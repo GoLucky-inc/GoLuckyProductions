@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                         We do not directly collect or store any personally identifiable information (PII) such as your name, address, or phone number on our servers.
                     </p>
                     <p>
-                        However, the app uses third-party services that may collect information used to identify your device for the purpose of serving advertisements and analyzing app performance. This includes the use of Advertising IDs (such as Google’s Advertising ID or Apple’s IDFA).
+                        However, the app uses third-party services that may collect information used to identify your device for specific operational purposes (such as fraud prevention and ad frequency limits). This may include the use of device identifiers, but these are not used for behavioral tracking.
                     </p>
                     <p>
                         The app does use third-party services that may collect information used to identify you. Link to the privacy policy of third-party service providers used by the app:
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
 
                     <h2 className="text-2xl font-semibold text-white mt-8 mb-4">General Data Protection Regulation (GDPR) & User Rights</h2>
                     <p>
-                        If you are located in the European Economic Area (EEA) or the UK, you have certain rights regarding your personal data. Since GoLucky Production does not store your personal data, we cannot delete it directly. However, you can exercise your rights regarding interest-based advertising by managing your device settings as described in the "Advertising and Cookies" section above or by managing your consent preferences via the in-app consent pop-up (if applicable).
+                        If you are located in the European Economic Area (EEA) or the UK, you have certain rights regarding your personal data. Since GoLucky Production does not store your personal data, we cannot delete it directly. However, you can exercise your rights regarding data processing by managing your device settings as described in the "Advertising and Data Collection" section above.
                     </p>
 
                     <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Security</h2>
