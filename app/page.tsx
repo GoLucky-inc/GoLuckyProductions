@@ -16,14 +16,14 @@ export default function Home() {
           <div className="text-2xl font-bold tracking-tighter">GoLucky</div>
           <div className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
             <a href="#games" className="hover:text-white transition-colors">Games</a>
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+            <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
           </div>
         </nav>
 
         {/* Vision Section */}
-        <header className="max-w-4xl mx-auto text-center mb-32 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8 tracking-tight">
+        <header className="min-h-screen flex flex-col justify-center items-center max-w-4xl mx-auto text-center mb-32 animate-fade-in">
+          <h1 className="text-7xl md:text-9xl font-bold tracking-tighter leading-tight mb-8">
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
               Hobby gamer turned
             </span>
@@ -31,72 +31,69 @@ export default function Home() {
               game maker!
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-2xl md:text-3xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
             Building games for the passion of building games.
           </p>
         </header>
 
         {/* Games Section */}
-        <section id="games" className="max-w-6xl mx-auto w-full mb-24">
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-3xl font-bold text-white">Our Games</h2>
-            <div className="h-px bg-white/10 flex-grow"></div>
-          </div>
+        <section id="games" className="py-32">
+          <h2 className="text-3xl font-bold mb-16 border-l-4 border-purple-500 pl-6">Our Games</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Snake Spell Card - Featured */}
-            <Link href="/snake-spell" className="group lg:col-span-8">
-              <div className="glass-panel p-8 h-full flex flex-col md:flex-row gap-8 items-center transition-all duration-300 group-hover:bg-white/5 group-hover:border-purple-500/30">
-                <div className="relative w-full md:w-1/2 aspect-video rounded-xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/snake-spell-hero.png"
-                    alt="Snake Spell"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                </div>
-                <div className="flex-1 text-left">
-                  <div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-purple-300 uppercase bg-purple-500/20 rounded-full">
-                    Latest Release
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">Snake Spell</h3>
-                  <p className="mb-6 text-gray-300 text-lg leading-relaxed">
-                    A mystical word puzzle adventure. Cast spells, grow your snake, and conquer the neon forest.
-                  </p>
-                  <span className="inline-flex items-center gap-2 text-purple-400 font-semibold group-hover:translate-x-2 transition-transform">
-                    Play Now <span className="text-xl">&rarr;</span>
+          <div className="grid grid-cols-1 gap-16">
+            {/* Snake Spell - Featured Large Card */}
+            <Link href="/snake-spell" className="group relative block h-[700px] rounded-3xl overflow-hidden bg-gray-900 border border-white/10 hover:border-purple-500/50 transition-all duration-500">
+              <div className="absolute inset-0">
+                <Image
+                  src="/snake-spell-hero.png"
+                  alt="Snake Spell"
+                  fill
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              </div>
+
+              <div className="absolute bottom-0 left-0 p-16 w-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="px-4 py-1.5 rounded-full bg-purple-500 text-white text-sm font-bold uppercase tracking-wider">
+                    Featured
                   </span>
+                  <span className="px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-bold uppercase tracking-wider backdrop-blur-md">
+                    Puzzle Arcade
+                  </span>
+                </div>
+                <h3 className="text-6xl font-bold mb-6 text-white group-hover:text-purple-300 transition-colors">Snake Spell</h3>
+                <p className="text-2xl text-gray-300 max-w-2xl mb-10 leading-relaxed">
+                  A neon-soaked word puzzle adventure. Slither, spell, and survive.
+                </p>
+                <div className="flex items-center gap-3 text-purple-400 font-medium group-hover:translate-x-2 transition-transform text-lg">
+                  Play Now <span className="text-2xl">&rarr;</span>
                 </div>
               </div>
             </Link>
+          </div>
+        </section>
 
-            {/* Coming Soon Card */}
-            <div className="glass-panel p-8 lg:col-span-4 flex flex-col justify-center h-full opacity-80 hover:opacity-100 transition-opacity">
-              <div className="w-16 h-16 mb-6 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
-                <span className="text-3xl">✨</span>
+        {/* Spacer for visual separation */}
+        <div className="h-32 md:h-64"></div>
+
+        {/* In the Lab Section */}
+        <section className="py-32">
+          <h2 className="text-3xl font-bold mb-16 border-l-4 border-blue-500 pl-6">In the Lab</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="rounded-3xl bg-white/5 border border-white/10 p-12 flex flex-col justify-between min-h-[300px] hover:bg-white/10 transition-colors">
+              <div>
+                <div className="text-4xl mb-6">✨</div>
+                <h3 className="text-2xl font-bold mb-4">What's Next?</h3>
+                <p className="text-gray-400 text-lg leading-relaxed">Our labs are bubbling with new ideas. Stay tuned for our next magical release.</p>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-white">What's Next?</h3>
-              <p className="mb-6 text-gray-400 leading-relaxed">
-                Our labs are bubbling with new ideas. Stay tuned for our next magical release.
-              </p>
-              <div className="mt-auto pt-6 border-t border-white/5">
-                <span className="text-sm font-medium text-gray-500 uppercase tracking-widest">
-                  In Development
-                </span>
-              </div>
+              <div className="mt-8 text-sm text-gray-500 font-mono uppercase tracking-widest">In Development</div>
             </div>
           </div>
         </section>
 
-        <footer className="mt-auto pt-12 border-t border-white/5 text-center text-sm text-gray-600 flex flex-col gap-4">
+        <footer className="mt-auto py-24 border-t border-white/5 text-center text-sm text-gray-600 flex flex-col gap-6">
           <p>&copy; {new Date().getFullYear()} GoLucky Production. All rights reserved.</p>
-          <Link href="/privacy-policy" className="hover:text-gray-400 transition-colors">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-service" className="hover:text-gray-400 transition-colors">
-            Terms of Service
-          </Link>
         </footer>
       </div>
     </main>
