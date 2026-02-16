@@ -29,8 +29,24 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This site is deployed on [Vercel](https://vercel.com) with automatic deployments enabled.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### How to Deploy Changes
+
+1. **Make your changes** to the code
+2. **Commit the changes**:
+   ```bash
+   git add .
+   git commit -m "Description of changes"
+   ```
+3. **Push to GitHub**:
+   ```bash
+   git push origin main
+   ```
+4. **Vercel automatically deploys** - Your changes will be live in 1-2 minutes
+
+Vercel watches the GitHub repository and automatically deploys whenever you push to the main branch.
+
+**Preview Deployments**: Push to any other branch to get a preview URL for testing before merging to main.
