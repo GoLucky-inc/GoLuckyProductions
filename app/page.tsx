@@ -58,14 +58,14 @@ export default function Home() {
           </Link>
 
           {/* Coming Soon Card */}
-          <div className="project-card relative rounded overflow-hidden bg-stone-900/60 border border-stone-700/60 aspect-[4/3] flex items-center justify-center">
+          <Link href="/creeper-defense" className="project-card group relative rounded overflow-hidden bg-stone-900/60 border border-stone-700/60 aspect-[4/3] flex items-center justify-center">
             <div className="text-center p-8">
-              <div className="text-4xl mb-4">&#9733;</div>
-              <h3 className="text-xl text-amber-100 mb-2">What&apos;s Next?</h3>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">&#9733;</div>
+              <h3 className="text-xl text-amber-100 mb-2 group-hover:text-amber-300 transition-colors">What&apos;s Next?</h3>
               <p className="text-sm text-stone-500">Something new is brewing at the ranch.</p>
-              <span className="inline-block mt-4 text-xs text-stone-600 uppercase tracking-widest" style={{ fontFamily: 'var(--font-display)' }}>In Development</span>
+              <span className="inline-block mt-4 text-xs text-amber-700 group-hover:text-amber-400 uppercase tracking-widest transition-colors" style={{ fontFamily: 'var(--font-display)' }}>Join the Waitlist →</span>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
