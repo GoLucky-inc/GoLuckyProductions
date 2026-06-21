@@ -57,6 +57,29 @@ export default function Home() {
             </div>
           </Link>
 
+          {/* Block Fit Card */}
+          <Link href="/block-fit" className="project-card group relative block rounded overflow-hidden bg-stone-900 border border-stone-700/60 aspect-[4/3]">
+            <Image
+              src="/block-fit/feature.png"
+              alt="Block Fit: Cozy Village"
+              fill
+              className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-8">
+              <div className="flex gap-2 mb-3">
+                <span className="px-3 py-1 rounded-sm bg-amber-600/20 text-amber-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
+                  Puzzle
+                </span>
+                <span className="px-3 py-1 rounded-sm bg-stone-400/20 text-stone-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
+                  Cozy
+                </span>
+              </div>
+              <h3 className="text-2xl text-amber-100 mb-1 group-hover:text-amber-300 transition-colors">Block Fit: Cozy Village</h3>
+              <p className="text-sm text-stone-400">Fit cozy blocks into snug plots and grow a charming little village.</p>
+            </div>
+          </Link>
+
           {/* Coming Soon Card */}
           <Link href="/creeper-defense" className="project-card group relative rounded overflow-hidden bg-stone-900/60 border border-stone-700/60 aspect-[4/3] flex items-center justify-center">
             <div className="text-center p-8">
