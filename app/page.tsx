@@ -60,7 +60,7 @@ export default function Home() {
           {/* Block Fit Card */}
           <Link href="/block-fit" className="project-card group relative block rounded overflow-hidden bg-stone-900 border border-stone-700/60 aspect-[4/3]">
             <Image
-              src="/block-fit/feature.png"
+              src="/block-fit/icon.png"
               alt="Block Fit: Cozy Village"
               fill
               className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
