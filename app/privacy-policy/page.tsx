@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
                 </nav>
 
                 <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-                <p className="mb-4 text-sm text-gray-500">Last updated: June 21, 2026</p>
+                <p className="mb-4 text-sm text-gray-500">Last updated: July 2, 2026</p>
 
                 <section className="space-y-6">
                     <p>
@@ -73,11 +73,41 @@ export default function PrivacyPolicy() {
 
                     <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Apps Without Ads</h2>
                     <p>
-                        Some of our apps &mdash; including <strong>Block Fit: Cozy Village</strong> in its current version &mdash; contain
-                        no advertising, no analytics, and no third-party tracking SDKs. These apps collect no data; everything
-                        stays on your device. If we add advertising to such an app in the future, we will update the
-                        app&apos;s Google Play &quot;Data safety&quot; information accordingly, and the &quot;Apps That Display Ads&quot; section
-                        above will apply.
+                        Some of our apps contain no advertising, no analytics, and no third-party tracking SDKs. These apps
+                        collect no data; everything stays on your device. If we add advertising to such an app in the future,
+                        we will update the app&apos;s Google Play &quot;Data safety&quot; information accordingly, and the
+                        &quot;Apps That Display Ads&quot; section above will apply.
+                    </p>
+                    <p>
+                        <strong>Block Fit: Cozy Village</strong> displays no ads inside the game. However, it includes an ad
+                        attribution SDK, described in the next section.
+                    </p>
+
+                    <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Ad Attribution (Block Fit: Cozy Village)</h2>
+                    <p>
+                        To understand whether our own advertising campaigns for Block Fit: Cozy Village are effective, the app
+                        includes the Meta (Facebook) SDK for ad attribution &mdash; that is, measuring whether the app was
+                        installed after seeing one of our ads on Facebook or Instagram. This does not place any ads inside the
+                        game.
+                    </p>
+                    <p>
+                        For this purpose, the Meta SDK may automatically collect and share with Meta Platforms, Inc. your
+                        device&apos;s advertising ID (GAID), IP address, device and app information, and basic app events such as
+                        when the app is installed or opened. This data is used for ad measurement and aggregated analytics
+                        only. We do not use it to identify you personally, and it is not used for behavioral advertising
+                        within the app.
+                    </p>
+                    <p>
+                        You can limit or stop this collection at any time by deleting or resetting your device&apos;s advertising
+                        ID (Android: Settings &rarr; Privacy &rarr; Ads). You can read about how Meta handles this data in the{" "}
+                        <a href="https://www.facebook.com/privacy/policy" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 hover:underline">
+                            Meta Privacy Policy
+                        </a>.
+                    </p>
+                    <p>
+                        To request deletion of attribution data associated with your device, contact us at{" "}
+                        <a href="mailto:support@goluckyproduction.com" className="text-purple-400 hover:text-purple-300">support@goluckyproduction.com</a>{" "}
+                        and we will assist with the request.
                     </p>
 
                     <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Log Data</h2>
@@ -94,7 +124,8 @@ export default function PrivacyPolicy() {
                         If you are located in the European Economic Area (EEA) or the UK, you have certain rights regarding your
                         personal data. Since GoLucky Production does not store your personal data, we cannot delete it directly.
                         However, you can exercise your rights regarding data processing by managing your device settings as
-                        described in the &quot;Apps That Display Ads&quot; section above.
+                        described in the &quot;Apps That Display Ads&quot; and &quot;Ad Attribution&quot; sections above, or by
+                        contacting us for assistance with a deletion request.
                     </p>
 
                     <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Security</h2>
