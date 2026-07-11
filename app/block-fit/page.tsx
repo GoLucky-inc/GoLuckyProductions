@@ -5,8 +5,11 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Block Fit: Cozy Village — GoLucky Production",
   description:
-    "A cozy block-fit puzzle where every piece you place grows a charming little village. Coming soon to Google Play.",
+    "A cozy block-fit puzzle where every piece you place grows a charming little village. Free now on Google Play.",
 };
+
+const ANDROID_URL =
+  "https://play.google.com/store/apps/details?id=com.joeleavitt.hamlet";
 
 const features = [
   {
@@ -43,7 +46,7 @@ export default function BlockFitPage() {
             className="mx-auto mb-6 rounded-2xl shadow-lg shadow-black/40"
           />
           <span className="inline-block mb-4 px-4 py-1.5 rounded-sm border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-            Coming Soon
+            Now on Google Play
           </span>
           <h1 className="text-5xl md:text-7xl tracking-wide mb-6" style={{ background: "none", WebkitTextFillColor: "unset" }}>
             <span className="text-amber-100">BLOCK </span>
@@ -55,9 +58,14 @@ export default function BlockFitPage() {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in-delay">
-          <span className="btn btn-outline text-lg px-8 py-4 cursor-default opacity-90">
-            Coming soon to Google Play
-          </span>
+          <a
+            href={ANDROID_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary text-lg px-8 py-4"
+          >
+            Get it on Google Play — Free
+          </a>
         </div>
       </section>
 
