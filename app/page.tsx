@@ -1,105 +1,141 @@
-import Link from "next/link";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { Arrow, Clover } from "./components/brand";
+
+export const metadata: Metadata = {
+  title: "Go Lucky Productions | Small Games, A Little Wonder",
+  description:
+    "Independent mobile games made with curiosity and care. Discover Borrowed Light, a light and shadow puzzle adventure, and Block Fit: Cozy Village.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      <section className="container flex-grow flex flex-col justify-center items-center text-center py-32 md:py-40">
-        <div className="animate-fade-in">
-          <p className="section-label animate-fade-in">Game Studio</p>
-        </div>
-        <h1 className="tracking-wide mb-4 animate-fade-in-delay whitespace-nowrap" style={{ background: 'none', WebkitTextFillColor: 'unset', fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}>
-          GoLucky Production
-        </h1>
-        <div className="animate-fade-in-delay">
-          <p className="tracking-wide text-amber-400 whitespace-nowrap" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)' }}>
-            <span className="rotating-text-wrapper" style={{ width: '7em' }}>
-              <span>Puzzle Games</span>
-              <span>Arcade Games</span>
-              <span>Word Games</span>
-            </span>
-          </p>
-        </div>
-        <p className="text-base md:text-lg text-stone-400 max-w-md mx-auto leading-relaxed mt-6 animate-fade-in-delay-2">
-          Hobby gamer turned game maker. Building games for the passion of building games.
+    <main id="main-content">
+      <section className="container home-intro reveal">
+        <p className="eyebrow">
+          <span className="little-dot" /> An independent game studio
         </p>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="container py-32">
-        <div className="text-center mb-16">
-          <p className="section-label">Projects</p>
-          <h2 className="text-3xl md:text-4xl tracking-wide">Our Games</h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Snake Spell Card */}
-          <Link href="/snake-spell" className="project-card group relative block rounded overflow-hidden bg-stone-900 border border-stone-700/60 aspect-[4/3]">
-            <Image
-              src="/appstore.png"
-              alt="Snake Spell"
-              fill
-              className="object-cover opacity-60 group-hover:opacity-85 group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <div className="flex gap-2 mb-3">
-                <span className="px-3 py-1 rounded-sm bg-amber-600/20 text-amber-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
-                  Puzzle
-                </span>
-                <span className="px-3 py-1 rounded-sm bg-stone-400/20 text-stone-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
-                  Arcade
-                </span>
-              </div>
-              <h3 className="text-2xl text-amber-100 mb-1 group-hover:text-amber-300 transition-colors">Snake Spell</h3>
-              <p className="text-sm text-stone-400">Slither, spell, and survive in this neon word-puzzle adventure.</p>
-            </div>
-          </Link>
-
-          {/* Block Fit Card */}
-          <Link href="/block-fit" className="project-card group relative block rounded overflow-hidden bg-stone-900 border border-stone-700/60 aspect-[4/3]">
-            <Image
-              src="/block-fit/icon.png"
-              alt="Block Fit: Cozy Village"
-              fill
-              className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 p-8">
-              <div className="flex gap-2 mb-3">
-                <span className="px-3 py-1 rounded-sm bg-amber-600/20 text-amber-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
-                  Puzzle
-                </span>
-                <span className="px-3 py-1 rounded-sm bg-stone-400/20 text-stone-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
-                  Cozy
-                </span>
-              </div>
-              <h3 className="text-2xl text-amber-100 mb-1 group-hover:text-amber-300 transition-colors">Block Fit: Cozy Village</h3>
-              <p className="text-sm text-stone-400">Fit cozy blocks into snug plots and grow a charming little village.</p>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="container py-16 mt-auto border-t border-stone-800/50">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-stone-600">&copy; {new Date().getFullYear()} GoLucky Production. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy-policy" className="text-sm text-stone-600 hover:text-stone-300 transition-colors">Privacy</Link>
-            <Link href="/terms-of-service" className="text-sm text-stone-600 hover:text-stone-300 transition-colors">Terms</Link>
-            <div className="flex gap-4 text-stone-600">
-              <a href="https://github.com/GoLucky-inc" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-amber-300 transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/joseph-leavitt/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-amber-300 transition-colors">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              </a>
-            </div>
+        <div className="intro-grid">
+          <h1>
+            Small games.
+            <br />
+            <em>A little wonder.</em>
+          </h1>
+          <div className="intro-note">
+            <p>
+              A clever puzzle. A quiet discovery. One more try. We make little
+              worlds worth spending time in.
+            </p>
+            <a href="#projects" className="text-link">
+              Find your next game <Arrow direction="down" />
+            </a>
           </div>
         </div>
-      </footer>
+      </section>
+      <section
+        id="projects"
+        className="container games-section"
+        aria-labelledby="games-heading"
+      >
+        <div className="section-heading">
+          <h2 id="games-heading" className="eyebrow">
+            Made to be played
+          </h2>
+          <span className="small-note">
+            A little collection, made with care
+          </span>
+        </div>
+        <article className="featured-game reveal">
+          <Link
+            href="/borrowed-light"
+            className="game-art borrowed-art"
+            aria-label="Discover Borrowed Light"
+          >
+            <Image
+              src="/borrowed-light/feature.png"
+              alt="Borrowed Light: tiny shadow companions gathered around a candle beside a glowing doorway"
+              width={1024}
+              height={500}
+              sizes="(max-width: 1200px) 92vw, 1144px"
+              preload
+            />
+            <span className="art-link" aria-hidden="true">
+              <Arrow />
+            </span>
+          </Link>
+          <div className="game-summary">
+            <div>
+              <div className="game-meta">
+                <span className="status">Coming soon · Android</span>
+                <span>Light &amp; shadow puzzles</span>
+              </div>
+              <h3>
+                <Link href="/borrowed-light">Borrowed Light</Link>
+              </h3>
+              <p>
+                A candle changes everything. Turn shadows into pathways and
+                guide tiny companions home.
+              </p>
+            </div>
+            <Link href="/borrowed-light" className="button button-light">
+              Explore the game <Arrow />
+            </Link>
+          </div>
+        </article>
+        <article className="secondary-game">
+          <Link
+            href="/block-fit"
+            className="game-art block-art"
+            aria-label="Discover Block Fit: Cozy Village"
+          >
+            <Image
+              src="/block-fit/feature.png"
+              alt="Block Fit: Cozy Village Puzzle, with colorful little village buildings"
+              width={1024}
+              height={500}
+              sizes="(max-width: 760px) 92vw, 560px"
+            />
+          </Link>
+          <div className="secondary-copy">
+            <div className="game-meta">
+              <span className="status status-live">
+                Available on Google Play
+              </span>
+            </div>
+            <h3>
+              Make room for
+              <br />
+              <em>a little village.</em>
+            </h3>
+            <p>
+              Meet Block Fit: Cozy Village. Fit the pieces, bring neighbors
+              together, and watch a snug little town take shape.
+            </p>
+            <Link href="/block-fit" className="text-link">
+              Discover Block Fit <Arrow />
+            </Link>
+          </div>
+        </article>
+      </section>
+      <section className="studio-note container">
+        <Clover className="studio-clover" />
+        <p className="eyebrow">From player to maker</p>
+        <h2>
+          Made for the love
+          <br />
+          of <em>making games.</em>
+        </h2>
+        <p>
+          Go Lucky Productions started with a lifelong love of playing and a
+          curiosity about what goes into the worlds on screen. Still learning.
+          Still making. Always playing.
+        </p>
+        <Link href="/about" className="text-link">
+          Meet the maker <Arrow />
+        </Link>
+      </section>
     </main>
   );
 }

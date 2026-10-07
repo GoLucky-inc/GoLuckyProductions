@@ -1,118 +1,164 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { Arrow } from "../components/brand";
+import { BLOCK_FIT_PLAY_URL } from "../site";
 
 export const metadata: Metadata = {
-  title: "Block Fit: Cozy Village — GoLucky Production",
+  title: "Block Fit: Cozy Village — A Cozy Block Puzzle",
   description:
-    "A cozy block-fit puzzle where every piece you place grows a charming little village. Free now on Google Play.",
+    "Fit houses, farms, shops, and parks into snug plots. Build a little village with Block Fit: Cozy Village, free on Google Play.",
+  alternates: { canonical: "/block-fit" },
+  openGraph: {
+    title: "Block Fit: Cozy Village",
+    description:
+      "Fit the blocks. Grow a cozy little village. Free on Google Play.",
+    url: "/block-fit",
+    images: [
+      {
+        url: "/block-fit/feature.png",
+        width: 1024,
+        height: 500,
+        alt: "Block Fit: Cozy Village",
+      },
+    ],
+  },
 };
-
-const ANDROID_URL =
-  "https://play.google.com/store/apps/details?id=com.joeleavitt.hamlet";
-
-const features = [
-  {
-    title: "Cozy block-fit puzzles",
-    body: "Slot houses, farms, markets, shops, and parks into snug plots. Fit everyone in before move-in day.",
-  },
-  {
-    title: "A village that grows",
-    body: "Connect buildings into bustling neighborhoods that level up in style as your town grows.",
-  },
-  {
-    title: "Good-neighbor bonuses",
-    body: "Place farms by markets, homes by shops, and parks beside anything to earn extra stars.",
-  },
-  {
-    title: "Calm by design",
-    body: "No timers, no pressure. Soft storybook art and a gentle soundtrack made for unwinding.",
-  },
-];
-
-const shots = ["/block-fit/shot1.png", "/block-fit/shot2.png", "/block-fit/shot3.png"];
-
 export default function BlockFitPage() {
   return (
-    <main className="min-h-screen flex flex-col">
-      {/* Hero */}
-      <section className="container flex flex-col justify-center items-center text-center py-24">
-        <div className="animate-fade-in">
-          <Image
-            src="/block-fit/icon.png"
-            alt="Block Fit: Cozy Village icon"
-            width={104}
-            height={104}
-            className="mx-auto mb-6 rounded-2xl shadow-lg shadow-black/40"
-          />
-          <span className="inline-block mb-4 px-4 py-1.5 rounded-sm border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-            Now on Google Play
-          </span>
-          <h1 className="text-5xl md:text-7xl tracking-wide mb-6" style={{ background: "none", WebkitTextFillColor: "unset" }}>
-            <span className="text-amber-100">BLOCK </span>
-            <span className="text-amber-400">FIT</span>
-          </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-stone-400 leading-relaxed">
-            A cozy block-fit puzzle where every piece you place grows a charming little village. Fit the blocks, house every villager, and build a little place that feels like home.
-          </p>
-        </div>
-
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center animate-fade-in-delay">
+    <main id="main-content" className="game-page">
+      <section className="container game-intro reveal">
+        <Link href="/#projects" className="back-link">
+          ← All games
+        </Link>
+        <div className="game-title-row">
+          <div>
+            <p className="eyebrow">Cozy village · Block puzzles</p>
+            <h1>
+              Block <em>Fit</em>
+            </h1>
+          </div>
           <a
-            href={ANDROID_URL}
+            href={BLOCK_FIT_PLAY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-lg px-8 py-4"
+            className="button button-light"
           >
-            Get it on Google Play — Free
+            Get it on Google Play <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <div className="game-banner block-art">
+          <Image
+            src="/block-fit/feature.png"
+            alt="Block Fit: Cozy Village Puzzle, with a colorful collection of village buildings"
+            width={1024}
+            height={500}
+            sizes="(max-width: 1200px) 92vw, 1144px"
+            preload
+          />
+        </div>
       </section>
-
-      {/* Screenshots */}
-      <section className="container pb-8">
-        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-          {shots.map((src, i) => (
-            <div key={src} className="relative aspect-[9/16] rounded overflow-hidden border border-stone-700/60 bg-stone-900">
+      <section className="container game-overview">
+        <div>
+          <p className="eyebrow">A puzzle with a place for everyone</p>
+          <h2>
+            Small pieces.
+            <br />
+            <em>A place to call home.</em>
+          </h2>
+        </div>
+        <div className="overview-copy">
+          <p>
+            A cozy block puzzle where every piece you place grows a charming
+            little village. Fit the blocks, house the villagers, and build a
+            place that feels like home.
+          </p>
+          <p>
+            Bring farms, markets, shops, and parks together. Find the right fit
+            and let a little town take shape, one good idea at a time.
+          </p>
+          <p className="availability">
+            Available now on Android · Free to download
+          </p>
+        </div>
+      </section>
+      <section className="container feature-list" aria-label="Game features">
+        <article>
+          <span className="feature-number">01 / FIT</span>
+          <h3>Everything has a place.</h3>
+          <p>
+            Slot homes, farms, markets, and parks into snug plots. Fit everyone
+            in before move-in day.
+          </p>
+        </article>
+        <article>
+          <span className="feature-number">02 / GROW</span>
+          <h3>Better together.</h3>
+          <p>
+            Place farms by markets, homes by shops, and parks beside anything to
+            earn good-neighbor bonuses.
+          </p>
+        </article>
+        <article>
+          <span className="feature-number">03 / UNWIND</span>
+          <h3>Take a little breather.</h3>
+          <p>
+            Soft storybook art and a gentle soundtrack. No timers, just you and
+            the next piece of the puzzle.
+          </p>
+        </article>
+      </section>
+      <section
+        className="container screenshots-section"
+        aria-labelledby="screenshots-heading"
+      >
+        <div className="section-heading">
+          <h2 id="screenshots-heading">
+            Welcome to <em>the neighborhood.</em>
+          </h2>
+          <span className="small-note">In-game screenshots</span>
+        </div>
+        <div className="portrait-gallery">
+          {[1, 2, 3].map((n) => (
+            <a
+              key={n}
+              href={`/block-fit/shot${n}.png`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View full-size Block Fit gameplay screenshot ${n}`}
+            >
               <Image
-                src={src}
-                alt={`Block Fit gameplay ${i + 1}`}
-                fill
-                sizes="(max-width: 768px) 33vw, 220px"
-                className="object-cover"
+                src={`/block-fit/shot${n}.png`}
+                alt={`Block Fit village puzzle gameplay, screenshot ${n}`}
+                width={1080}
+                height={1920}
+                sizes="(max-width: 760px) 29vw, 320px"
               />
-            </div>
+            </a>
           ))}
         </div>
       </section>
-
-      {/* Features */}
-      <section className="container py-20">
-        <div className="text-center mb-12">
-          <p className="section-label">What&apos;s inside</p>
-          <h2 className="text-3xl md:text-4xl tracking-wide">A calm, thinky escape</h2>
+      <section className="container release-note">
+        <Image
+          src="/block-fit/icon.png"
+          alt="Block Fit app icon"
+          width={88}
+          height={88}
+        />
+        <div>
+          <p className="eyebrow">Your next little escape</p>
+          <h2>Make yourself at home.</h2>
+          <p>Block Fit: Cozy Village is free on Google Play.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {features.map((f) => (
-            <div key={f.title} className="rounded border border-stone-700/60 bg-stone-900/60 p-6">
-              <h3 className="text-xl text-amber-100 mb-2">{f.title}</h3>
-              <p className="text-sm text-stone-400 leading-relaxed">{f.body}</p>
-            </div>
-          ))}
-        </div>
+        <a
+          href={BLOCK_FIT_PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button button-light"
+        >
+          Start your village <Arrow />
+        </a>
       </section>
-
-      {/* Footer */}
-      <footer className="container py-12 mt-auto border-t border-stone-800/50">
-        <div className="flex justify-center gap-6">
-          <Link href="/privacy-policy" className="text-sm text-stone-600 hover:text-stone-300 transition-colors">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-service" className="text-sm text-stone-600 hover:text-stone-300 transition-colors">
-            Terms of Service
-          </Link>
-        </div>
-      </footer>
     </main>
   );
 }

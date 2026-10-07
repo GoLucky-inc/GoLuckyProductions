@@ -1,86 +1,95 @@
+﻿import type { Metadata } from "next";
+import { Clover } from "../components/brand";
+export const metadata: Metadata = {
+  title: "Our Story",
+  description:
+    "Meet Joe, the maker behind Go Lucky Productions. Independent games born from a lifelong love of playing.",
+  alternates: { canonical: "/about" },
+};
 export default function AboutPage() {
   return (
-    <main className="min-h-screen flex flex-col">
-      {/* About */}
-      <section className="container flex-grow py-24 max-w-3xl mx-auto">
-        <div className="animate-fade-in">
-          <p className="section-label">About</p>
-          <h1 className="text-4xl md:text-6xl tracking-wide mb-4" style={{ background: 'none', WebkitTextFillColor: 'unset' }}>
-            The Player Becomes{" "}
-            <span className="text-amber-400">the Maker</span>
-          </h1>
+    <main id="main-content">
+      <section className="container about-intro reveal">
+        <p className="eyebrow">The story so far</p>
+        <h1>
+          Once a player.
+          <br />
+          <em>Always a player.</em>
+        </h1>
+        <div className="about-story">
+          <Clover className="about-clover" />
+          <div>
+            <p className="lead">
+              Hi, I&apos;m Joe. A lifelong gamer who wanted to find out what
+              happens on the other side of the screen.
+            </p>
+            <p>
+              From early pixel adventures to open worlds, games have always been
+              part of my life. Eventually, playing sparked a different kind of
+              curiosity: could I make something of my own?
+            </p>
+            <p>
+              Go Lucky Productions is that curiosity taking shape. It&apos;s a
+              personal journey into making games: learning the code, crafting
+              the details, and building the experiences I want to play.
+            </p>
+            <p>
+              That might mean finding a home for a little village or a path
+              through the shadows. What connects it all is the pleasure of a
+              good puzzle and the small discoveries along the way.
+            </p>
+            <p>
+              I&apos;m still learning, still building, and glad you&apos;re
+              here.
+            </p>
+            <p className="signature">
+              Joe <span>Founder &amp; game maker</span>
+            </p>
+          </div>
         </div>
-
-        <div className="space-y-6 text-lg text-stone-400 leading-relaxed mt-12 animate-fade-in-delay">
-          <p>
-            I&apos;ve been a gamer my whole life. From the pixelated adventures of the early days to the immersive open worlds of today, I&apos;ve always been fascinated by the magic that happens on screen.
-          </p>
-          <p>
-            But playing wasn&apos;t enough. I wanted to understand how that magic was made.
-          </p>
-          <p>
-            <strong className="text-amber-100 font-semibold">GoLucky Production</strong> is the result of that curiosity. It&apos;s my personal journey into the world of game development — learning the code, crafting the art, and building the experiences I&apos;ve always wanted to play.
-          </p>
-          <p>
-            I&apos;m just getting started, and I&apos;m learning something new every day. Thanks for checking out my games and being part of this adventure.
-          </p>
-        </div>
-
-        <div className="mt-16 pt-8 border-t border-stone-800 animate-fade-in-delay-2">
-          <p className="text-stone-600 italic">
-            — Joe, Founder of GoLucky Production
-          </p>
-        </div>
-
       </section>
-
-      {/* Contact */}
-      <section className="container py-24 flex flex-col items-center text-center animate-fade-in-delay-2">
-        <p className="section-label">Contact</p>
-        <h2 className="text-3xl md:text-5xl tracking-wide mb-4" style={{ background: 'none', WebkitTextFillColor: 'unset' }}>
-          Get in Touch
+      <section id="contact" className="container contact-section">
+        <p className="eyebrow">The door is open</p>
+        <h2>
+          Good ideas start
+          <br />
+          <em>with a hello.</em>
         </h2>
-        <p className="text-lg text-stone-400 max-w-lg mx-auto mb-12">
-          Have a question, feedback, or just want to say hi?<br />I&apos;d love to hear from you.
+        <p>
+          A question about a game, a bug you spotted, or just something
+          you&apos;d like to share? I&apos;d love to hear it.
         </p>
-
-        <div className="rounded-sm border border-stone-700 bg-stone-900 p-10 md:p-16">
-          <p className="text-xs text-stone-500 uppercase tracking-widest mb-4 font-semibold">Email</p>
+        <a className="contact-email" href="mailto:gamersgolucky@gmail.com">
+          gamersgolucky@gmail.com <span aria-hidden="true">↗</span>
+        </a>
+        <p className="contact-tip">
+          For game support, include the game name, your device, and what
+          happened. It helps me get to the right fix.
+        </p>
+        <div className="social-links">
           <a
-            href="mailto:gamersgolucky@gmail.com"
-            className="text-2xl md:text-4xl text-amber-100 hover:text-amber-400 transition-colors break-all md:break-normal"
-            style={{ fontFamily: 'var(--font-display)' }}
+            href="https://github.com/GoLucky-inc"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            gamersgolucky@gmail.com
+            GitHub ↗
           </a>
-        </div>
-
-        <p className="text-sm text-stone-500 mt-8">
-          In my professional life, I also work with data and AI —{" "}
+          <a
+            href="https://www.linkedin.com/in/joseph-leavitt/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
           <a
             href="https://ai-prepared.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-400 hover:text-amber-300 transition-colors underline"
           >
-            check it out here
-          </a>.
-        </p>
-
-        <div className="flex gap-6 mt-12 text-stone-500">
-          <a href="https://github.com/GoLucky-inc" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-amber-300 transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/joseph-leavitt/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-amber-300 transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            My work in data &amp; AI ↗
           </a>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="container py-12 mt-auto border-t border-stone-800/50">
-        <p className="text-sm text-stone-600 text-center">&copy; {new Date().getFullYear()} GoLucky Production. All rights reserved.</p>
-      </footer>
     </main>
   );
 }
